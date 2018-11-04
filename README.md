@@ -39,7 +39,7 @@ Things you may want to cover:
 ## groups-tabel
 |Culmn|Type|Option|
 |-----|----|------|
-|group_name|strings|null: false, foreign_key: true|
+|name|strings|null: false, foreign_key: true|
 
 
 ### Association
