@@ -28,8 +28,8 @@ Things you may want to cover:
 ## members-Table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|reference|null: false, foreign_key: true|
-|group_id|reference|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -62,7 +62,7 @@ Things you may want to cover:
 ## posts-tabel
 |Culmn|Type|Option|
 |-----|----|------|
-|user_id|reference|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
 |text|strings||
 |image|strings||
 
