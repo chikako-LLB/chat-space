@@ -28,8 +28,8 @@ Things you may want to cover:
 ## members-Table
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
+|group_id|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
@@ -45,6 +45,7 @@ Things you may want to cover:
 ### Association
 - has_many :users though::members
 - has_many :posts
+- has_many :members
 
 
 ## user-tabel
@@ -54,13 +55,14 @@ Things you may want to cover:
 |e_mail|strings|null: false, foreign_key: true, unique:true|
 
 ### Association
-- has_many :groups
+- has_many :groups though: :members
+- has_many :members
 - has_many :posts
 
 ## posts-tabel
 |Culmn|Type|Option|
 |-----|----|------|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|reference|null: false, foreign_key: true|
 |text|strings||
 |image|strings||
 
