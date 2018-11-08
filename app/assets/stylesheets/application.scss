@@ -1,0 +1,139 @@
+/*
+ *= require font-awesome
+ */
+ @import "./reset";
+ @import "./variable";
+
+.notification{
+  background: #38AEF0;
+  color: #FFF;
+  font-size: 12px;
+  text-align: center;
+}
+.wrapper{
+  height: 100vh;
+  .chatside{
+    float: left;
+    width: 300px;
+    height: 100vh;
+    background: #2f3e51;
+    .chatside__user {
+      background: #253141;
+      display: flex;
+      min-height: 125px - (47px * 2);
+      justify-content: space-between;
+      position: relative;
+      padding: 47px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #FFF;
+      .edit-user, .cog-user {
+        color: #FFF;
+        text-decoration: none;
+      }
+    }
+    .chatside__groups{
+      overflow: scroll;
+      .chatside__group {
+        padding: 20px 20px 40px 20px;
+        &:hover{
+          background: pink;
+        }
+        .chatside__group-name{
+          font-size: 15px;
+          color: #FFF;
+        }
+        .chatside__group-message{
+          font-size: 11px;
+          color: #FFF;
+        }
+      }
+    }
+  }
+  .chatmain{
+    float: right;
+    width: calc(100vw - 300px);
+    background: #DDD;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    .chatmain__header{
+      background: #FFF;
+      border-bottom: 1px solid #eee;
+      min-height: 125px;
+      padding: 0px 40px;
+      .chatmain__header-top-content{
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding-top: 28px;
+        .chatmain__group-name{
+          font-size: 20px;
+          color: #333;
+          word-break: break-word;
+          top:35px;
+          left:0px;
+        }
+        .edit-button{
+          background: white;
+          border: 1px solid $lightblue;
+          color: $lightblue;
+          font-size: 12px;
+          text-align: center;
+          text-decoration: none;
+          padding: 10px 20px;
+        }
+      }
+      .chatmain__group-members{
+        font-size: 12px;
+        color: #999;
+        padding: 10px 0px 21px 0;
+      }
+    }
+    .chatmain__body{
+      padding: 46px 40px 0px 40px;
+      height: calc(100vh - 15% - 138px);
+      display: block;
+      overflow: scroll;
+      @include chatmain__message-wrapper
+    }
+    .chatmain__footer{
+      background: #AAA;
+      height: 90px;
+      position: relative;
+      padding: 0px 40px;
+      textarea{
+        font-size: 16px;
+        color: #434A54;
+        position: relative;
+        top:20px;
+        height: 50px;
+        width: calc(100vw - 300px - 250px);
+        line-height: 3em;
+        padding-left: 10px;
+        padding-right: 50px;
+      }
+      .submit {
+        float: right;
+        position: relative;
+        top: 20px;
+        background: #18AEF0;
+        font-size: 12px;
+        height: 50px;
+        width: 80px;
+        text-align:center;
+        color: white;
+      }
+      .file_field{
+        display: none;
+      }
+      .insert-image {
+        color: #434A54;
+        position: relative;
+        left: -40px;
+      }
+    }
+  }
+}
+

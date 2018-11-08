@@ -1,0 +1,53 @@
+%body
+.notification
+  チャットグループが作成されました。
+.wrapper
+  .chatside
+    .chatside__user
+      .chatside__user-name
+        user-name
+      .chatside__user-content
+        %a.edit-user{ href: "#" }
+          #{ fa_icon "edit" }
+        %a.cog-user{ href: "#" }
+          #{ fa_icon "cog" }
+    .chatside__groups
+      .chatside__group
+        .chatside__group-name
+          group_name_A
+        .chatside__group-message
+          AAAAAAAAAAAAAA
+      .chatside__group
+        .chatside__group-name
+          group_name_A
+        .chatside__group-message
+          AAAAAAAAAAAAAA
+      .chatside__group
+        .chatside__group-name
+          group_name_A
+        .chatside__group-message
+          AAAAAAAAAAAAAA
+  .chatmain
+    .chatmain__header
+      .chatmain__header-top-content
+        .chatmain__group-name
+          chat-main:group-name-A
+        %a.edit-button{ href: "#", type: "submit" }
+          EDIT
+      .chatmain__group-members
+        chat-main:group-members-name
+    .chatmain__body
+      .chatmain__message-wrapper
+        .chatmain__member-name
+          member's name
+          .chatmain_positing-time
+            2018/11/05 10:10:00
+        .chatmain__message
+          message-massage-massage-massage-massage-massage
+    .chatmain__footer
+      %textarea(cols ="30" name = "text" placeholder = "new message" rows = "1" )
+      %input.submit(type = "submit" value = "SEND")
+      %label.upload-label{for:"insert-image"}
+        %span.insert-image #{ fa_icon "image" }
+        %input.file_field{type: "file", id: "insert-image"}
+
