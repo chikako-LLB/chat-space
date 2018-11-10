@@ -10,22 +10,22 @@ $navy: #434A54;
     &:hover{
       background: pink;
     }
-    .chatside__group-name{
+    &__name{
       font-size: 15px;
       color: #FFF;
     }
-    .chatside__group-message{
+    &__message{
       font-size: 11px;
       color: #FFF;
     }
   }
 }
 
-@mixin chatmain__message-wrapper{
-        .chatmain__member-name{
+@mixin chatmain__message__wrapper{
+        .chatmain__member__name{
           font-size: 16px;
           color: $navy;
-          .chatmain_positing-time{
+          &__positing__time{
             font-size: 12px;
             color: #999;
             display: inline-block;
@@ -36,7 +36,7 @@ $navy: #434A54;
             left:10px;
           }
         }
-        .chatmain__message{
+        &__message{
           padding:10px 0px 40px 0px;
           font-size: 14px;
           color: $navy;
