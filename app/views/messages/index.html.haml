@@ -4,42 +4,42 @@
 .wrapper
   .chatside
     .chatside__user
-      .chatside__user-name
+      .chatside__user__name
         user-name
-      .chatside__user-content
+      .chatside__user__content
         %a.edit-user{ href: "#" }
           #{ fa_icon "edit" }
         %a.cog-user{ href: "#" }
           #{ fa_icon "cog" }
     .chatside__groups
-      .chatside__groups-group
-        .chatside__groups-name
+      .chatside__groups__group
+        .chatside__groups__name
           group_name_A
-        .chatside__groups-message
+        .chatside__groups__message
           AAAAAAAAAAAAAA
     .chatside__groups
-      .chatside__groups-group
-        .chatside__groups-name
+      .chatside__groups__group
+        .chatside__groups__name
           group_name_A
-        .chatside__groups-message
+        .chatside__groups__message
           AAAAAAAAAAAAAA
 
   .chatmain
     .chatmain__header
-      .chatmain__header-content
-        .chatmain__header-content-group-name
+      .chatmain__header__content
+        .chatmain__header__content__group__name
           group-name-A
         %a.edit-button{ href: "#", type: "submit" }
           EDIT
-      .chatmain__header-group-members
+      .chatmain__header__group__members
         group-members-name
     .chatmain__body
-      .chatmain__body-message-wrapper
-        .chatmain__body-member-name
+      .chatmain__body__message__wrapper
+        .chatmain__body__member__name
           member's name
-          .chatmain__body-positing-time
+          .chatmain__body__positing__time
             2018/11/05 10:10:00
-        .chatmain__body-message
+        .chatmain__body__message
           message-massage-massage-massage-massage-massage
     .chatmain__footer
       %textarea(cols ="30" name = "text" placeholder = "new message" rows = "1" )
