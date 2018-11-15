@@ -1,32 +1,11 @@
 .wrapper
-  .chatside
-    .header
-      %h3.haeder__name
-        = current_user.name
-      %ul.header__list
-        %li.list
-          = link_to do
-            = fa_icon 'pencil-square-o', class: 'icon'
-        %li.list
-          = link_to edit_user_registration_path(current_user) do
-            = fa_icon 'cog', class: 'icon'
-    .groups
-      .groups__group
-        .groups__name
-          group_name_A
-        .groups__message
-          AAAAAAAAAAAAAA
-      .groups__group
-        .groups__name
-          group_name_A
-        .groups__message
-          AAAAAAAAAAAAAA
+  = render 'layouts/chatside'
   .chatmain
     .chatmain__header
       .chatmain__header__content
         .chatmain__header__content__group__name
           group-name-A
-        %a.edit-button{ href: "#", type: "submit" }
+        %a.edit-button{ href:"/groups/1/edit", type: "submit" }
           EDIT
       .chatmain__header__group__members
         group-members-name

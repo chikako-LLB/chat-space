@@ -1,0 +1,45 @@
+.chatside{
+  float: left;
+  width: 300px;
+  height: 100vh;
+  background: #2f3e51;
+  color: #FFF;
+  .header{
+    background: #253141;
+    display: flex;
+    min-height: 125px - (47px * 2);
+    justify-content: space-between;
+    position: relative;
+    padding: 47px 20px;
+    h3.haeder__name{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    li.list{
+      display: inline-block;
+      text-decoration: none;
+      a{
+        color: #FFF;
+      }
+    }
+  }
+  .groups{
+    overflow: scroll;
+    a {
+      text-decoration: none;
+    }
+    &__group {
+      padding: 20px 20px 40px 20px;
+      color: #FFF;
+      &:hover{
+        background: pink;
+      }
+      &__name{
+        font-size: 15px;
+      }
+      &__message{
+        font-size: 11px;
+      }
+    }
+  }
+}
