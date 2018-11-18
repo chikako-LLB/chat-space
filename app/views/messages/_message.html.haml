@@ -1,0 +1,13 @@
+/ - @group.messages.each do |message|
+.chatmain__body__message__wrapper
+  .chatmain__body__message__wrapper__member__name
+    = message.user.name
+  .chatmain__body__message__wrapper__positing__time
+    = format_posted_time(message.created_at)
+  .chatmain__body__message__wrapper__content
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+

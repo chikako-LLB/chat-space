@@ -4,19 +4,14 @@
     .chatmain__header
       .chatmain__header__content
         .chatmain__header__content__group__name
-          group-name-A
+          = @group.name
         %a.edit-button{ href:"/groups/1/edit", type: "submit" }
           EDIT
       .chatmain__header__group__members
-        group-members-name
+        - @group.users.each do |user|
+          = user.name
     .chatmain__body
-      .chatmain__body__message__wrapper
-        .chatmain__body__member__name
-          member's name
-          .chatmain__body__positing__time
-            2018/11/05 10:10:00
-        .chatmain__body__message
-          message-massage-massage-massage-massage-massage
+      = render @messages
     .chatmain__footer
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'text_area', placeholder: 'type a message'
