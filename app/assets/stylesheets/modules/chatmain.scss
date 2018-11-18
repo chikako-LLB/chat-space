@@ -51,7 +51,7 @@
     height: 90px;
     position: relative;
     padding: 0px 40px;
-    textarea{
+    .text_area{
       font-size: 16px;
       color: #434A54;
       position: relative;
@@ -62,16 +62,8 @@
       padding-left: 10px;
       padding-right: 50px;
     }
-    .submit {
-      float: right;
-      position: relative;
-      top: 20px;
-      background: #18AEF0;
-      font-size: 12px;
-      height: 50px;
-      width: 80px;
-      text-align:center;
-      color: white;
+    .form__mask{
+      text-align: right;
     }
     .file_field{
       display: none;
@@ -79,7 +71,19 @@
     .insert-image {
       color: #434A54;
       position: relative;
-      left: -40px;
+      right: 70px;
+      top: -10px;
+    }
+    .submit {
+      float: right;
+      position: relative;
+      top: -53px;
+      background: #18AEF0;
+      font-size: 12px;
+      height: 50px;
+      width: 80px;
+      text-align:center;
+      color: white;
     }
   }
 }

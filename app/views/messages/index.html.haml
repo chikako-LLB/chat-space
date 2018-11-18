@@ -18,9 +18,10 @@
         .chatmain__body__message
           message-massage-massage-massage-massage-massage
     .chatmain__footer
-      %textarea(cols ="30" name = "text" placeholder = "new message" rows = "1" )
-      %input.submit(type = "submit" value = "SEND")
-      %label.upload-label{for:"insert-image"}
-        %span.insert-image #{ fa_icon "image" }
-        %input.file_field{type: "file", id: "insert-image"}
-
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'text_area', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'insert-image' do
+            = fa_icon 'picture-o', class: 'insert-image'
+            = f.file_field :image, class: 'file_field'
+        = f.submit 'SEND', class: 'submit'
