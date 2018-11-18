@@ -44,7 +44,7 @@
     height: calc(100vh - 15% - 138px);
     display: block;
     overflow: scroll;
-    @include chatmain__message__wrapper
+    @include chatmain__body__message__wrapper
   }
   &__footer{
     background: #AAA;
