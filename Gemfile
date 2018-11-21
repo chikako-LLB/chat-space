@@ -35,9 +35,24 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "font-awesome-rails"
+gem "haml-rails", "~> 1.0"
+gem 'erb2haml'
+gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+ # rspec-rails is a testing framework for Rails 3.x, 4.x and 5.x.
+  gem 'rspec-rails'
+  gem 'factory_girl_rails', "~> 4.4.1"
+  # This gem is a port of Perl's Data::Faker library that generates fake data.
+  gem 'faker'
+
 end
 
 group :development do
@@ -49,12 +64,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem "font-awesome-rails"
-gem "haml-rails", "~> 1.0"
-gem 'erb2haml'
-gem 'devise'
-gem 'carrierwave'
-gem 'mini_magick'
+group :test do
+
+  gem 'rails-controller-testing'
+end
+
 
