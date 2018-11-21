@@ -1,0 +1,3 @@
+--require spec_helper
+# 下記の記述を追加することでテストの結果が見やすくなります.
+--format documentation
