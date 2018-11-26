@@ -20,6 +20,7 @@ $(document).on('turbolinks:load', function(){
       </div>`;
     return html;
   };
+
 // SENDボタンが押されたらイベントを発火させ、ajaxを使ってアクションが動かす
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
@@ -42,7 +43,6 @@ $(document).on('turbolinks:load', function(){
     })
   // アラートを表示する
     .fail(function(error){
-      console.log("Error:", error);
       alert(error.responseText);
     });
     return false;
