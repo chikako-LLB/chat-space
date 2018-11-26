@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function(){
     .fail(function(error){
       alert(error.responseText);
     });
-    $(function(){
+    .alwasys(function(){
       $('.submit').prop("disabeled", false);
     })
   });
