@@ -3,19 +3,19 @@
 $(document).on('turbolinks:load', function(){
 // Jasonのデータを元にHTMLを組み立てる。
   function buildHTML(message){
-    var message_content = message.content ? `<p class="lower-message__content">${message.content}</p>` : "";
-    var image = message.image_url ? `<img class="lower-message__image" src="${message.image_url}" />`: "";
+    var messageContent = message.content ? `<p class="lower-message__content">${message.content}</p>` : "";
+    var messageImage = message.imageUrl ? `<img class="lower-message__image" src="${message.imageUrl}" />`: "";
     var html =
       `<div class="chatmain__body__message__wrapper">
         <div class="chatmain__body__message__wrapper__member__name">
-          ${message.user_name}
+          ${message.userName}
         </div>
         <div class="chatmain__body__message__wrapper__positing__time">
           ${message.date}
         </div>
         <div class="chatmain__body__message__wrapper__content">
-          ${message_content}
-          ${image}
+          ${messageContent}
+          ${messageImage}
         </div>
       </div>`;
     return html;
@@ -44,9 +44,9 @@ $(document).on('turbolinks:load', function(){
   // アラートを表示する
     .fail(function(error){
       alert(error.responseText);
-    });
-    .alwasys(function(){
-      $('.submit').prop("disabeled", false);
+    })
+    .always(function(){
+      $('.submit').prop("disabled", false);
     })
   });
 });
