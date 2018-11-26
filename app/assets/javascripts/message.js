@@ -45,7 +45,9 @@ $(document).on('turbolinks:load', function(){
     .fail(function(error){
       alert(error.responseText);
     });
-    return false;
+    $(function(){
+      $('.submit').prop("disabeled", false);
+    })
   });
 });
 
