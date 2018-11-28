@@ -54,16 +54,12 @@ $(document).on('turbolinks:load', function(){
 
   function updateMessage() {
     if (location.href.match(/\/groups\/\d+\/messages/)) {
-      var messageId = $(".message").last().attr('message.id');
       $.ajax({
         url: location.href.json,
         type: 'GET',
-        data: {id: "messageId"},
-        dataType: 'json'
+        dataType: 'json',
       })
       .done(function(messages) {
-        var id = $('.message').data('.messageId');
-        var insertHTML = "";
         messages.forEach(function(message){
           // Search through the HTML and try to find the message
           var messageAlreadyAdded = $(`.chatmain__body__message__wrapper[data-id='${message.id}']`).length > 0;
