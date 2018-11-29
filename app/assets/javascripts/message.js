@@ -54,22 +54,18 @@ $(document).on('turbolinks:load', function(){
 
   function updateMessage() {
     if (location.href.match(/\/groups\/\d+\/messages/)) {
+      var messageAlreadyAdded = $('.chatmain__body__message__wrapper:last').data('id');
       $.ajax({
         url: location.href.json,
         type: 'GET',
-        dataType: 'json',
+        data: {id: messageAlreadyAdded},
+        dataType: 'json'
       })
       .done(function(messages) {
         messages.forEach(function(message){
-          // Search through the HTML and try to find the message
-          var messageAlreadyAdded = $(`.chatmain__body__message__wrapper[data-id='${message.id}']`).length > 0;
-
-          if (!messageAlreadyAdded) {
-            // Only executed if the message has not already been added
-            var html = buildHTML(message);
-            $('.chatmain__body').append(html);
-            $('.chatmain__body').animate({scrollTop: $('.chatmain__body')[0].scrollHeight}, 'fast');
-          }
+          var html = buildHTML(message);
+          $('.chatmain__body').append(html);
+          $('.chatmain__body').animate({scrollTop: $('.chatmain__body')[0].scrollHeight}, 'fast');
         });
       })
       .fail(function() {

@@ -6,13 +6,12 @@ class MessagesController < ApplicationController
     @messages = @group.messages
     respond_to do |format|
       format.html
-      format.json
+      format.json { @messageAlreadyAdded = Message.where('id > ?', params[:id]) }
     end
   end
 
   def create
     @message = @group.messages.new(message_params)
-    # @message.user = current_user
     # メッセージが保存された場合
     if @message.save
       respond_to do |format|
