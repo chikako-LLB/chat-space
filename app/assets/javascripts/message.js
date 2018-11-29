@@ -50,7 +50,7 @@ $(document).on('turbolinks:load', function(){
   })
   // ＊ーーーここからメッセージの自動更新ーーー＊
   // ５秒(=5000ミリ秒)ごとに関数updateMessagを呼び出す
-  setInterval(updateMessage,5000);
+  var interval = setInterval(updateMessage,5000);
 
   function updateMessage() {
     if (location.href.match(/\/groups\/\d+\/messages/)) {
