@@ -18,3 +18,4 @@
 public/uploads/*
 
 app/models/user.rb
+config/secrets.yml
