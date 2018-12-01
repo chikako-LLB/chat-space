@@ -52,7 +52,11 @@ group :development, :test do
   gem 'factory_girl_rails', "~> 4.4.1"
   # This gem is a port of Perl's Data::Faker library that generates fake data.
   gem 'faker'
-
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
